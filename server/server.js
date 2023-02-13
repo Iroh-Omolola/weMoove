@@ -5,7 +5,7 @@ import carRoute from './src/routes/carRoute.js'
 import bookingRoute from './src/routes/bookingRoute.js'
 import userRoute from './src/routes/userRoute.js';
 const app = express()
-const port = process.env.PORT || 5000
+const port = process.env.PORT || 8000
 databaseConnection.getConnect();
 
 app.use(express.json());

@@ -10,13 +10,13 @@ function EditCar({ match }) {
   const { loading } = useSelector((state) => state.alertsReducer);
   const [car, setcar] = useState();
   const [totalcars, settotalcars] = useState([]);
+
   useEffect(() => {
     if (cars.length === 0) {
       dispatch(getAllCars());
     } else {
       settotalcars(cars);
       setcar(cars.find((o) => o._id === match.params.carid));
-      console.log(car);
     }
   }, [cars]);
 
